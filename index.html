@@ -4,29 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080b16">
+<title>Join Telegram</title>
 
-<title>VIP Premium Community</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<!-- META PIXEL CODE -->
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+s.parentNode.insertBefore(t,s)
+}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1155452496925369');
 fbq('track', 'PageView');
 </script>
-<!-- END META PIXEL CODE -->
+<!-- END META PIXEL -->
 
 <style>
 * {
@@ -37,355 +33,66 @@ fbq('track', 'PageView');
 
 body {
   min-height: 100vh;
-  padding: 25px 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Poppins', sans-serif;
-  background:
-    radial-gradient(circle at 20% 15%, #14234b, transparent 40%),
-    radial-gradient(circle at 85% 85%, #321044, transparent 40%),
-    #050711;
+  padding: 20px;
+  background: #080b16;
+  font-family: Arial, sans-serif;
 }
 
-.vip-card {
-  width: 100%;
-  max-width: 440px;
-  padding: 2px;
-  border-radius: 25px;
-  background: linear-gradient(
-    135deg,
-    #00eaff,
-    #753bff,
-    #ff29d8,
-    #00eaff
-  );
-  background-size: 300% 300%;
-  animation: borderFlow 6s ease infinite;
-  box-shadow: 0 0 35px #00dfff25;
-}
-
-@keyframes borderFlow {
-  0%,100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.vip-inner {
-  position: relative;
-  overflow: hidden;
-  padding: 30px 22px;
-  border-radius: 23px;
-  text-align: center;
-  color: white;
-  background:
-    radial-gradient(circle at top, #15264b, transparent 48%),
-    #080b16;
-}
-
-.vip-inner:before {
-  content: "";
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  top: -110px;
-  left: 25%;
-  background: #00dfff;
-  filter: blur(100px);
-  opacity: .18;
-}
-
-.content {
-  position: relative;
-  z-index: 2;
-}
-
-.logo {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #00eaff;
-  padding: 3px;
-  background: #10172b;
-  box-shadow:
-    0 0 15px #00eaff,
-    0 0 35px #743cff66;
-  margin-bottom: 17px;
-}
-
-.tag {
-  display: inline-block;
-  padding: 7px 15px;
-  border: 1px solid #00eaff;
-  border-radius: 30px;
-  color: #00eaff;
-  background: #00eaff12;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-.icon {
-  font-size: 42px;
-  margin: 13px 0 3px;
-  filter: drop-shadow(0 0 12px #00eaff);
-}
-
-.title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 28px;
-  line-height: 1.4;
-  font-weight: 900;
-  margin: 5px 0 12px;
-  text-shadow: 0 0 15px #00dfff88;
-}
-
-.title span {
-  color: #00eaff;
-}
-
-.subtitle {
-  color: #b8c5df;
-  font-size: 12px;
-  line-height: 1.9;
-  margin-bottom: 22px;
-}
-
-.info-box {
-  padding: 17px 12px;
-  border-radius: 14px;
-  background: linear-gradient(120deg,#101d38,#19112c);
-  border: 1px solid #4c5bba;
-  margin-bottom: 17px;
-}
-
-.info-box small {
-  color: #a4b2d5;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.info-box strong {
+.telegram-btn {
   display: block;
-  color: #00eaff;
-  margin-top: 7px;
+  width: 100%;
+  max-width: 380px;
+  padding: 19px 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 14px;
+  color: #050b19;
   font-size: 17px;
   font-weight: 900;
-}
-
-.status {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  color: #7effc2;
-  font-size: 10px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #00ff9d;
-  box-shadow: 0 0 12px #00ff9d;
-}
-
-.divider {
-  height: 1px;
+  letter-spacing: 1px;
   background: linear-gradient(
-    90deg,transparent,#00dfff,transparent
+    100deg,
+    #00eaff,
+    #a8faff,
+    #8d6bff
   );
-  margin-bottom: 20px;
+  box-shadow: 0 0 25px #00dfff55;
+  transition: .2s;
 }
 
-.features {
-  display: flex;
-  justify-content: space-around;
-  gap: 8px;
-  margin-bottom: 23px;
-}
-
-.feature {
-  flex: 1;
-  padding: 12px 5px;
-  border-radius: 10px;
-  background: #121b32;
-  border: 1px solid #293b66;
-  color: #c6d6f5;
-  font-size: 10px;
-  font-weight: 700;
-}
-
-.feature span {
-  display: block;
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.join-btn {
-  display: block;
-  width: 100%;
-  padding: 17px 10px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: #050b19;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: .5px;
-  background: linear-gradient(
-    100deg,#00eaff,#a8faff,#8d6bff
-  );
-  box-shadow: 0 0 22px #00cfff55;
-  animation: pulse 2s infinite;
-  transition: .3s;
-}
-
-.join-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 35px #00dfffaa;
-}
-
-.join-btn:active {
+.telegram-btn:active {
   transform: scale(.97);
-}
-
-@keyframes pulse {
-  0%,100% { filter: brightness(1); }
-  50% { filter: brightness(1.2); }
-}
-
-.footer {
-  margin-top: 19px;
-  font-size: 9px;
-  color: #8793b5;
-  letter-spacing: 1.5px;
-}
-
-.bottom {
-  margin-top: 9px;
-  color: #00eaff;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-@media(max-width:480px) {
-  .vip-inner { padding: 27px 17px; }
-  .title { font-size: 25px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- META PIXEL NOSCRIPT -->
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1155452496925369&ev=PageView&noscript=1"
-/>
+alt="">
 </noscript>
 
-<div class="vip-card">
-<div class="vip-inner">
-<div class="content">
-
-<!-- LOGO -->
-<img
-class="logo"
-src="https://i.postimg.cc/yNZPpc3p/F92D9E80-9F85-4779-ADAA-188FED17F989.jpg"
-alt="VIP Community Logo"
->
-
-<div class="tag">✦ NEXT LEVEL VIP ACCESS ✦</div>
-
-<div class="icon">⚡</div>
-
-<h1 class="title">
-VIP <span>WELCOME</span><br>
-ACCESS
-</h1>
-
-<p class="subtitle">
-हमारे VIP Telegram Community से जुड़ें और
-लेटेस्ट अपडेट्स एवं मेंबरशिप की जानकारी प्राप्त करें!
-</p>
-
-<div class="info-box">
-<small>COMMUNITY MEMBERSHIP</small>
-<strong>✦ PREMIUM VIP ACCESS ✦</strong>
-</div>
-
-<div class="status">
-<span class="dot"></span>
-TELEGRAM COMMUNITY AVAILABLE
-</div>
-
-<div class="divider"></div>
-
-<div class="features">
-<div class="feature">
-<span>⚡</span>
-VIP ACCESS
-</div>
-
-<div class="feature">
-<span>🔔</span>
-LATEST UPDATES
-</div>
-
-<div class="feature">
-<span>👑</span>
-COMMUNITY
-</div>
-</div>
-
-<!-- TELEGRAM JOIN BUTTON -->
 <a
-href="https://t.me/+CZR-8MabKPZmNGQ9"
-class="join-btn"
-id="telegramJoin"
+  href="https://t.me/+CZR-8MabKPZmNGQ9"
+  class="telegram-btn"
+  id="telegramJoin"
+  target="_blank"
+  rel="noopener noreferrer"
 >
-⚡ JOIN TELEGRAM NOW ➜
+  ⚡ JOIN TELEGRAM NOW ➜
 </a>
 
-<div class="footer">
-CONNECT • EXPLORE • EXPERIENCE
-</div>
-
-<div class="bottom">
-✦ PREMIUM VIP COMMUNITY ✦
-</div>
-
-</div>
-</div>
-</div>
-
-<!-- BUTTON CLICK TRACKING -->
 <script>
-(function () {
-  const button = document.getElementById('telegramJoin');
-  let clicked = false;
-
-  button.addEventListener('click', function (event) {
-    event.preventDefault();
-
-    if (clicked) return;
-    clicked = true;
-
-    const telegramURL = button.href;
-
-    if (typeof fbq === 'function') {
-      fbq('track', 'Lead');
-    }
-
-    // Allow time for Meta Pixel event to be sent
-    setTimeout(function () {
-      window.location.href = telegramURL;
-    }, 700);
-  });
-})();
+document.getElementById('telegramJoin').addEventListener('click', function() {
+  if (typeof window.fbq === 'function') {
+    window.fbq('track', 'Lead');
+  }
+});
 </script>
 
 </body>
