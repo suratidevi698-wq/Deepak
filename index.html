@@ -3,22 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080b16">
-
 <title>Join Telegram</title>
 
-<!-- META PIXEL CODE -->
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;
-n.push=n;
-n.loaded=!0;
-n.version='2.0';
+n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];
-t=b.createElement(e);
-t.async=!0;
+t=b.createElement(e);t.async=!0;
 t.src=v;
 s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
@@ -31,70 +26,53 @@ fbq('track','PageView');
 
 <noscript>
 <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1155452496925369&ev=PageView&noscript=1"/>
+src="https://www.facebook.com/tr?id=1155452496925369&ev=PageView&noscript=1">
 </noscript>
-<!-- END META PIXEL -->
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  min-height: 100%;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #080b16;
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#080b16;
+  font-family:Arial,sans-serif;
+  padding:20px;
 }
 
 .telegram-btn {
-  width: 100%;
-  max-width: 400px;
-  min-height: 58px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-
-  background: linear-gradient(90deg,#229ED9,#168AC5);
-  color: #ffffff;
-
-  text-decoration: none;
-  text-align: center;
-
-  font-size: 18px;
-  font-weight: 800;
-
-  border: none;
-  border-radius: 50px;
-
-  box-shadow: 0 8px 25px rgba(34,158,217,0.35);
-
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
+  width:100%;
+  max-width:400px;
+  height:60px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  border:0;
+  border-radius:50px;
+  background:linear-gradient(90deg,#229ED9,#168AC5);
+  color:white;
+  font-size:18px;
+  font-weight:800;
+  text-decoration:none;
+  cursor:pointer;
+  box-shadow:0 8px 25px rgba(34,158,217,.35);
+  -webkit-tap-highlight-color:transparent;
 }
 
 .telegram-btn:active {
-  transform: scale(0.97);
+  transform:scale(.97);
 }
 </style>
-
 </head>
 
 <body>
-
-<!-- ONLY TELEGRAM BUTTON -->
 
 <a
   href="https://t.me/+CZR-8MabKPZmNGQ9"
@@ -106,19 +84,15 @@ body {
   ✈ JOIN TELEGRAM NOW
 </a>
 
-<!-- MANUAL LEAD TRACKING -->
-
 <script>
-(function() {
+(function(){
 
-  const button = document.getElementById('telegramJoin');
+  const btn = document.getElementById('telegramJoin');
 
-  button.addEventListener('click', function() {
+  btn.addEventListener('click', function(){
 
-    if (typeof window.fbq === 'function') {
-
+    if(typeof window.fbq === 'function') {
       window.fbq('track', 'Lead');
-
     }
 
   });
