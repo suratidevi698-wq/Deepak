@@ -78,6 +78,7 @@ body {
 
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  transition: transform 0.1s ease;
 }
 
 .telegram-btn:active {
@@ -94,40 +95,27 @@ body {
 
 <script>
 (function() {
-
   const button = document.getElementById('telegramJoin');
-
+  const telegramUrl = 'https://t.me/+CZR-8MabKPZmNGQ9';
   let clicked = false;
 
-  button.addEventListener('click', function() {
-
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
     if (clicked) return;
     clicked = true;
-
-    // Open new tab directly during user click
-    const telegramTab = window.open('about:blank', '_blank');
 
     // Send Meta Lead Event
     if (typeof window.fbq === 'function') {
       window.fbq('track', 'Lead');
     }
 
-    // Redirect new tab to Telegram
-    if (telegramTab) {
-      telegramTab.location.href =
-        'https://t.me/+CZR-8MabKPZmNGQ9';
-    } else {
-      // Fallback if browser blocks popup
-      window.location.href =
-        'https://t.me/+CZR-8MabKPZmNGQ9';
-    }
-
+    // युजरला त्याच टॅबमध्ये किंवा योग्य पद्धतीने Telegram वर पाठवणे
+    // (मोबाईल ब्राउझरमध्ये पॉप-अप ब्लॉकरचा त्रास न होऊ देता)
     setTimeout(function() {
-      clicked = false;
-    }, 2000);
+      window.location.href = telegramUrl;
+    }, 250); // २००-२५० मिलिसेकंदात पिक्सेल रेकॉर्ड होऊन पेज रीडायरेक्ट होईल
 
   });
-
 })();
 </script>
 
