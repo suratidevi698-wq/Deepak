@@ -5,10 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080b16">
-
 <title>Join Telegram</title>
 
-<!-- META PIXEL CODE -->
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -35,8 +34,6 @@ fbq('track','PageView');
 src="https://www.facebook.com/tr?id=1155452496925369&ev=PageView&noscript=1">
 </noscript>
 
-<!-- END META PIXEL -->
-
 <style>
 * {
   margin: 0;
@@ -51,29 +48,26 @@ html, body {
 
 body {
   min-height: 100vh;
-  background: #080b16;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 18px;
+  background: #080b16;
+  padding: 12px;
   font-family: Arial, sans-serif;
 }
 
-/* BIG TELEGRAM BUTTON */
+/* EXTRA LARGE TELEGRAM BUTTON */
 
 .telegram-btn {
   width: 100%;
-  max-width: 550px;
-  min-height: 85px;
-
-  padding: 22px 25px;
+  max-width: 700px;
+  min-height: 120px;
+  padding: 30px 15px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 
   background: linear-gradient(
     100deg,
@@ -82,14 +76,14 @@ body {
   );
 
   color: #ffffff;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 900;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
 
   border: none;
-  border-radius: 60px;
+  border-radius: 70px;
 
-  box-shadow: 0 10px 35px rgba(34,158,217,0.5);
+  box-shadow: 0 12px 40px rgba(34,158,217,0.55);
 
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -99,22 +93,19 @@ body {
   transform: scale(0.97);
 }
 
-/* SMALL MOBILE */
-
 @media (max-width: 400px) {
   .telegram-btn {
-    min-height: 78px;
-    font-size: 21px;
-    padding: 18px;
+    min-height: 110px;
+    font-size: 25px;
+    gap: 12px;
   }
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- ONLY TELEGRAM BUTTON -->
+<!-- TELEGRAM BUTTON -->
 
 <button
   type="button"
@@ -130,7 +121,6 @@ body {
 (function() {
 
   const button = document.getElementById('telegramJoin');
-
   let clicked = false;
 
   button.addEventListener('click', function() {
@@ -138,15 +128,15 @@ body {
     if (clicked) return;
     clicked = true;
 
-    // Open Telegram in a new tab
+    // Open new tab on user click
     const telegramTab = window.open('about:blank', '_blank');
 
-    // Send Lead Event to Meta
+    // Meta Lead Event
     if (typeof window.fbq === 'function') {
       window.fbq('track', 'Lead');
     }
 
-    // Redirect new tab to Telegram
+    // Open Telegram
     if (telegramTab) {
       telegramTab.location.replace(
         'https://t.me/+CZR-8MabKPZmNGQ9'
