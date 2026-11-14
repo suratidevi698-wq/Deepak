@@ -5,33 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Join Telegram</title>
 
-<!-- Meta Pixel Code -->
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
-}(window, document,'script',
+}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1155452496925369');
-fbq('track', 'PageView');
+fbq('init','1155452496925369');
+fbq('track','PageView');
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1155452496925369&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
 
 <style>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -47,24 +54,25 @@ body {
 .telegram-btn {
   width: 100%;
   max-width: 400px;
-  padding: 18px 20px;
+  min-height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  background: linear-gradient(90deg, #229ED9, #168AC5);
+  background: linear-gradient(90deg,#229ED9,#168AC5);
   color: white;
   text-decoration: none;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 800;
   border-radius: 50px;
-  box-shadow: 0 8px 25px rgba(34,158,217,0.35);
+  box-shadow: 0 8px 25px rgba(34,158,217,.35);
   border: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .telegram-btn:active {
-  transform: scale(0.97);
+  transform: scale(.97);
 }
 </style>
 </head>
@@ -78,22 +86,18 @@ body {
   target="_blank"
   rel="noopener noreferrer"
 >
-  <span>✈</span>
-  JOIN TELEGRAM NOW
+  ✈ JOIN TELEGRAM NOW
 </a>
 
 <script>
-(function() {
-  const button = document.getElementById('telegramJoin');
+document.getElementById('telegramJoin')
+.addEventListener('click', function() {
 
-  button.addEventListener('click', function() {
+  if (typeof window.fbq === 'function') {
+    window.fbq('track', 'Lead');
+  }
 
-    if (typeof fbq === 'function') {
-      fbq('track', 'Lead');
-    }
-
-  });
-})();
+});
 </script>
 
 </body>
