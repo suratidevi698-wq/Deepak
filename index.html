@@ -3,17 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b16">
+
 <title>Join Telegram</title>
 
-<!-- META PIXEL -->
+<!-- META PIXEL CODE -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
 n.queue=[];
-t=b.createElement(e);t.async=!0;
+t=b.createElement(e);
+t.async=!0;
 t.src=v;
 s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
@@ -28,6 +33,7 @@ fbq('track','PageView');
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1155452496925369&ev=PageView&noscript=1"/>
 </noscript>
+<!-- END META PIXEL -->
 
 <style>
 * {
@@ -54,50 +60,70 @@ body {
 .telegram-btn {
   width: 100%;
   max-width: 400px;
-  min-height: 55px;
+  min-height: 58px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
+
   background: linear-gradient(90deg,#229ED9,#168AC5);
-  color: white;
+  color: #ffffff;
+
   text-decoration: none;
+  text-align: center;
+
   font-size: 18px;
   font-weight: 800;
-  border-radius: 50px;
-  box-shadow: 0 8px 25px rgba(34,158,217,.35);
+
   border: none;
+  border-radius: 50px;
+
+  box-shadow: 0 8px 25px rgba(34,158,217,0.35);
+
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 
 .telegram-btn:active {
-  transform: scale(.97);
+  transform: scale(0.97);
 }
 </style>
+
 </head>
 
 <body>
 
+<!-- ONLY TELEGRAM BUTTON -->
+
 <a
   href="https://t.me/+CZR-8MabKPZmNGQ9"
-  class="telegram-btn"
   id="telegramJoin"
+  class="telegram-btn"
   target="_blank"
   rel="noopener noreferrer"
 >
   ✈ JOIN TELEGRAM NOW
 </a>
 
+<!-- MANUAL LEAD TRACKING -->
+
 <script>
-document.getElementById('telegramJoin')
-.addEventListener('click', function() {
+(function() {
 
-  if (typeof window.fbq === 'function') {
-    window.fbq('track', 'Lead');
-  }
+  const button = document.getElementById('telegramJoin');
 
-});
+  button.addEventListener('click', function() {
+
+    if (typeof window.fbq === 'function') {
+
+      window.fbq('track', 'Lead');
+
+    }
+
+  });
+
+})();
 </script>
 
 </body>
