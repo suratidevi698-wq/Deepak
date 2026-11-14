@@ -1,12 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#070913">
-<title>Join Official Telegram</title>
+<meta name="theme-color" content="#080b16">
 
-<!-- META PIXEL -->
+<title>Join Telegram</title>
+
+<!-- META PIXEL CODE -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -33,6 +35,8 @@ fbq('track','PageView');
 src="https://www.facebook.com/tr?id=1155452496925369&ev=PageView&noscript=1">
 </noscript>
 
+<!-- END META PIXEL -->
+
 <style>
 * {
   margin: 0;
@@ -42,159 +46,122 @@ src="https://www.facebook.com/tr?id=1155452496925369&ev=PageView&noscript=1">
 
 html, body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
-  background: #070913;
-  background-image: radial-gradient(circle at 50% 20%, #17213d 0%, #070913 100%);
+  min-height: 100vh;
+  background: #080b16;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
-  font-family: 'Poppins', Arial, sans-serif;
+
+  padding: 18px;
+  font-family: Arial, sans-serif;
 }
 
-/* मुख्य कार्ड डिझाइन - पूर्ण गोल कोपरे (Border-radius वाढवला) */
-.card-box {
-  width: 100%;
-  max-width: 440px;
-  background: rgba(18, 24, 43, 0.7);
-  border: 1px solid rgba(34, 158, 217, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 50px; /* कडा पूर्णपणे गोलाकार केल्या */
-  padding: 45px 28px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-}
+/* BIG TELEGRAM BUTTON */
 
-/* Telegram लोगो */
-.logo-circle {
-  width: 85px;
-  height: 85px;
-  background: linear-gradient(135deg, #229ED9, #1275a7);
-  border-radius: 50%;
-  margin: 0 auto 20px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 10px 25px rgba(34, 158, 217, 0.5);
-  animation: float-logo 3s ease-in-out infinite;
-}
-
-.logo-circle svg {
-  width: 44px;
-  height: 44px;
-  fill: #ffffff;
-}
-
-@keyframes float-logo {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-.heading {
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.subtext {
-  color: #94a3b8;
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-/* मोठे आणि पूर्ण गोल कोपऱ्यांचे (Pill Shape) बटण */
 .telegram-btn {
   width: 100%;
-  height: 70px;
+  max-width: 550px;
+  min-height: 85px;
+
+  padding: 22px 25px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 
-  background: linear-gradient(90deg, #229ED9, #0088cc);
+  background: linear-gradient(
+    100deg,
+    #229ED9,
+    #0878ED
+  );
+
   color: #ffffff;
-
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 25px;
+  font-weight: 900;
   letter-spacing: 0.8px;
 
   border: none;
-  border-radius: 50px; /* बटणाचे कोपरे पूर्णपणे गोल (Capsule/Pill आकार) केले */
+  border-radius: 60px;
 
-  box-shadow: 0 10px 30px rgba(34, 158, 217, 0.5);
+  box-shadow: 0 10px 35px rgba(34,158,217,0.5);
 
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  transition: all 0.2s ease;
-  animation: pulse-glow 2s infinite;
 }
 
 .telegram-btn:active {
-  transform: scale(0.96);
-  box-shadow: 0 5px 15px rgba(34, 158, 217, 0.4);
+  transform: scale(0.97);
 }
 
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(34, 158, 217, 0.6);
-  }
-  70% {
-    box-shadow: 0 0 0 16px rgba(34, 158, 217, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(34, 158, 217, 0);
+/* SMALL MOBILE */
+
+@media (max-width: 400px) {
+  .telegram-btn {
+    min-height: 78px;
+    font-size: 21px;
+    padding: 18px;
   }
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="card-box">
-  <!-- Telegram SVG Vector Icon -->
-  <div class="logo-circle">
-    <svg viewBox="0 0 24 24">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.03-1.99 1.27-5.62 3.73-.53.36-1.01.54-1.44.53-.47-.01-1.38-.27-2.06-.49-.83-.27-1.49-.42-1.43-.89.03-.25.38-.51 1.08-.78 4.23-1.84 7.05-3.04 8.46-3.61 4.02-1.67 4.85-1.96 5.39-1.97.12 0 .39.03.56.17.14.12.18.28.2.4-.01.07.01.23-.03.39z"/>
-    </svg>
-  </div>
+<!-- ONLY TELEGRAM BUTTON -->
 
-  <h1 class="heading">Join Our Community</h1>
-  <p class="subtext">Get instant updates, exclusive offers, and direct access by joining our Telegram channel.</p>
+<button
+  type="button"
+  id="telegramJoin"
+  class="telegram-btn"
+>
+  ✈ JOIN TELEGRAM NOW
+</button>
 
-  <button type="button" id="telegramJoin" class="telegram-btn">
-    ✈ JOIN TELEGRAM NOW
-  </button>
-</div>
+<!-- META LEAD TRACKING -->
 
 <script>
 (function() {
+
   const button = document.getElementById('telegramJoin');
-  const telegramUrl = 'https://t.me/+CZR-8MabKPZmNGQ9';
+
   let clicked = false;
 
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
+  button.addEventListener('click', function() {
+
     if (clicked) return;
     clicked = true;
 
-    // Send Meta Lead Event
+    // Open Telegram in a new tab
+    const telegramTab = window.open('about:blank', '_blank');
+
+    // Send Lead Event to Meta
     if (typeof window.fbq === 'function') {
       window.fbq('track', 'Lead');
     }
 
-    // पिक्सेल ट्रॅक झाल्यावर Telegram वर रीडायरेक्ट करणे
+    // Redirect new tab to Telegram
+    if (telegramTab) {
+      telegramTab.location.replace(
+        'https://t.me/+CZR-8MabKPZmNGQ9'
+      );
+    } else {
+      window.location.href =
+        'https://t.me/+CZR-8MabKPZmNGQ9';
+    }
+
     setTimeout(function() {
-      window.location.href = telegramUrl;
-    }, 250);
+      clicked = false;
+    }, 2000);
 
   });
+
 })();
 </script>
 
