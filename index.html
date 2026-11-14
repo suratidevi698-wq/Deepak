@@ -42,47 +42,49 @@ src="https://www.facebook.com/tr?id=1155452496925369&ev=PageView&noscript=1">
 
 html, body {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
 }
 
 body {
-  min-height: 100vh;
   background: #080b16;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 16px;
   font-family: Arial, sans-serif;
 }
 
+/* Chrome आणि मोबाईल ब्राउझरसाठी परफेक्ट साईझ */
 .telegram-btn {
   width: 100%;
-  max-width: 400px;
-  height: 60px;
+  max-width: 380px; /* क्रोम किंवा डेस्कटॉपवर बटण फार मोठे पसरणार नाही */
+  height: 56px;     /* स्टँडर्ड टच साईझ */
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 
-  background: linear-gradient(90deg,#229ED9,#168AC5);
-  color: #fff;
+  background: linear-gradient(90deg, #229ED9, #168AC5);
+  color: #ffffff;
 
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 
   border: none;
-  border-radius: 50px;
+  border-radius: 28px; /* गोल कोपरे */
 
-  box-shadow: 0 8px 25px rgba(34,158,217,.35);
+  box-shadow: 0 6px 20px rgba(34, 158, 217, 0.4);
 
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 0.1s ease;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .telegram-btn:active {
-  transform: scale(.97);
+  transform: scale(0.96);
+  box-shadow: 0 3px 10px rgba(34, 158, 217, 0.3);
 }
 </style>
 </head>
@@ -109,11 +111,10 @@ body {
       window.fbq('track', 'Lead');
     }
 
-    // युजरला त्याच टॅबमध्ये किंवा योग्य पद्धतीने Telegram वर पाठवणे
-    // (मोबाईल ब्राउझरमध्ये पॉप-अप ब्लॉकरचा त्रास न होऊ देता)
+    // क्रोम आणि मोबाईलवर पॉप-अप ब्लॉकरचा त्रास न होऊ देता अचूक रीडायरेक्ट
     setTimeout(function() {
       window.location.href = telegramUrl;
-    }, 250); // २००-२५० मिलिसेकंदात पिक्सेल रेकॉर्ड होऊन पेज रीडायरेक्ट होईल
+    }, 250);
 
   });
 })();
